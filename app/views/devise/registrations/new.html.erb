@@ -1,29 +1,43 @@
-<h2>Sign up</h2>
+<main class="conteiner-vertical-center">
+  <div class="children" align="center">
+    
+    <div id="logotipo1">
+      <br>
+        <h2>Regístrate</h2>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <div class="input-field col s12 center-align">
+      <%= f.label :Correo %><br />
+      <%= f.email_field :email, autofocus: true %>
+     </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="input-field col s12">
+      <%= f.label :Contraseña %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="input-field col s12">
+      <%= f.label :Confirmar_contraseña %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+   </div>
+   <br>
+    <div class="btn waves-effect waves-light actions">
+      <%= f.submit "Registrar" %>
+      <i class="material-icons right">send</i>
+    </div>
+    <% end %>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+  <%= render "devise/shared/links" %>
 
-<%= render "devise/shared/links" %>
+  </div>
+</main>
+
+
+
+

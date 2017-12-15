@@ -81,7 +81,9 @@ footer {
   font-style: italic;
 }
 
-
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
 /* Estilos para el login*/
 #new_user {
   width: 340px;
@@ -100,7 +102,7 @@ main {
 
 .conteiner-vertical-center {
   display: flex;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 .conteiner-vertical-center .children {
@@ -111,6 +113,64 @@ main {
   border-radius: 10px;
 
 }
+
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
+
+/* Estilos para la vista de registrar */
+
+#logotipo1 {
+  width: 400px;
+  height: 150px;
+  background: #410401;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#logotipo1 h2 {
+ color: #FFF;
+}
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
+
+/* Estilos para la vista ¿Olvidaste tu contraseña? */
+
+
+main {
+  height: 100%;
+}
+
+.conteiner-horizontal-center {
+  display: flex;
+  margin-top: 150px;
+}
+
+.conteiner-horizontal-center .children1 {
+  margin: auto;
+  width: 450px;
+  height: 400px;
+  background: #FFFFCC;
+  border-radius: 10px;
+
+}
+
+#logotipo2 {
+  width: 450px;
+  background: #410401;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+#logotipo2 h2{
+  color: #FFF;
+}
+
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
 
 /* Estilo para botones Register y Login*/
 ul.hmenu {
