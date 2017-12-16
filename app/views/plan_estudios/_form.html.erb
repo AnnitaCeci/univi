@@ -1,0 +1,42 @@
+<%= form_for(plan_estudio) do |f| %>
+  <% if plan_estudio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plan_estudio.errors.count, "error") %> prohibited this plan_estudio from being saved:</h2>
+
+      <ul>
+      <% plan_estudio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clave %>
+    <%= f.text_field :clave %>
+  </div>
+
+  <div class="field">
+    <%= f.label :semestre %>
+    <%= f.text_field :semestre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :inicio_vigencia %>
+    <%= f.text_field :inicio_vigencia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fin_vigencia %>
+    <%= f.text_field :fin_vigencia %>
+  </div>
+
+<div class="field">
+    <%= f.label :carrera_id %>
+    <%= f.collection_select(:carrera_id, @carreras , :id, :nombre)  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
