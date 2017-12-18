@@ -12,7 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
+//= require dataTables/jquery.dataTables
 //= require angular/angular
 //= require angular-route/angular-route
 //= require angular-rails-templates
 //= require_tree .
+// =  require dataTables / jquery.dataTables
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/2/jquery.dataTables.bootstrap

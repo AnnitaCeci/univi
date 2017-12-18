@@ -40,6 +40,7 @@ gem 'angular-rails-templates'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'jquery-datatables-rails','~> 3.4.0'
 gem 'devise'
 
 group :development, :test do

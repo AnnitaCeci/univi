@@ -131,6 +131,43 @@ main {
 #logotipo1 h2 {
  color: #FFF;
 }
+
+/* ************   EDITAR CUENTA  *******************   */
+
+#edit_user {
+  width: 80%;
+  padding: 6px 12px;
+}
+#edit_ico {
+  width: 400px;
+  background: #410401;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main {
+  height: 100%;
+}
+
+.edit_cuenta {
+  display: flex;
+  margin-top: 100px;
+}
+
+.edit_cuenta .edit {
+  margin: auto;
+  width: 400px;
+  height: 800x;
+  background: #FFFFCC;
+  border-radius: 10px;
+
+}
+.button_to input{
+  background: #26a69a;
+  padding: 8px 14px;
+  border-radius: 6px; 
+  color: #fff;
+}
+
 /* **************************************************************************************************************  
 ***************************************************************************************************************
 **********************************  */
@@ -192,4 +229,24 @@ ul.hmenu li:hover {
 
 ul.hmenu li a{
   color: #fff;
+}
+
+ul.hmenu li a:hover{
+  background: #B22222;
+  color: #fff;
+}
+
+ul.hmenu p{
+  font: Roboto;
+  font-size: 15px;
+  color: #410401;
+}
+
+.center-align {
+  display: inline;
+  float: left;
+}
+.right align {
+  display: inline;
+  float: right;
 }

@@ -16,11 +16,11 @@
   <div class="right-align">
 
     <ul class="hmenu">
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items' %>
       <% if user_signed_in? %>
       <p>Bienvenido : <b><%= current_user.email %></b></p>
           <%end%>
-      <%= render 'devise/menu/registration_items' %>
-      <%= render 'devise/menu/login_items' %>
     </ul>
 
   </div>
