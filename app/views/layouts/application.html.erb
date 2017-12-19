@@ -6,13 +6,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
 
-  <body>
-  <div class="center-align">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  </div>
+    <div id="contenedor" ng-app="univi">
+      <div id="header">
+         <img src="/assets/uvirtual-ea01ed0a7b5391a1983b601e2800536a6c49ad3b85bf61f2f1fd5f06289d698e.gif" alt="Uvirtual" width="1300" height="150" />
+      </div>
   <div class="right-align">
 
     <ul class="hmenu">
@@ -24,8 +22,34 @@
     </ul>
 
   </div>
+  <div id="nav">
+    <%= render '/layouts/menu' %>
+  </div>
 
-    <%= yield %>
+  </head>
+
+  <body>
+  <div class="center-align">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  </div>
+
+  <section id="contenido">
+    <article>
+       <%= yield %>
+    </article>
+  </section>
+
+  <aside>
+    <h2>Publicidad</h2>
+  </aside>
+
   </body>
+
+  <footer>
+    <label>Carretera a Acatlima Km. 2.5</label>
+  </footer>
+
+
 </html>
 

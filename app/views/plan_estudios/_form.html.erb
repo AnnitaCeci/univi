@@ -33,8 +33,17 @@
 
 <div class="field">
     <%= f.label :carrera_id %>
-    <%= f.collection_select(:carrera_id, @carreras , :id, :nombre)  %>
+    <%= f.collection_select(:carrera_id, Carrera.all , :id, :nombre)  %>
   </div>
+
+<div class="field">
+<%= f.select(:carrera_id) do %>
+  <% @carreras.each do |c| -%>
+    <%= content_tag(:option, c.id, value: c.nombre) %>
+  <% end %>
+<% end %>
+</div>
+
 
   <div class="actions">
     <%= f.submit %>

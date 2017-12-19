@@ -25,6 +25,7 @@ class PlanEstudiosController < ApplicationController
   # POST /plan_estudios
   # POST /plan_estudios.json
   def create
+    puts plan_estudio_params
     @plan_estudio = PlanEstudio.new(plan_estudio_params)
     carrera = Carrera.find(plan_estudio_params[:carrera_id])
     @plan_estudio.carrera = carrera

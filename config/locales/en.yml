@@ -23,3 +23,6 @@ en:
   hello: "Hello world"
   email: "Correo"
   password: "Contraseña"
+  create: "Crear"
+  edit: "Editar"
+  back: "Regresar"
