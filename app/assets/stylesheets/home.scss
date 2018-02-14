@@ -41,7 +41,7 @@ body{
 
 #contenido {
   width: 950px;
-  height: 500px;
+  height: 600px;
   float: left;
   background: #FFFFCC;
   margin-top: 10px;
@@ -57,7 +57,7 @@ body{
 
 aside {
   width: 325px;
-  height: 500px;
+  height: 600px;
   background: #410401;
   margin-top: 10px;
   float: right;
@@ -96,13 +96,14 @@ footer {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-main {
+main {                /* Estilo para la ubicación de las ventanas de login en el centro del contenido al lado izquierdo*/
+  float: left;
   height: 100%;
 }
 
 .conteiner-vertical-center {
   display: flex;
-  margin-top: 150px;
+  margin-top: 10px;
 }
 
 .conteiner-vertical-center .children {
@@ -111,7 +112,6 @@ main {
   height: 600px;
   background: #FFFFCC;
   border-radius: 10px;
-
 }
 
 /* **************************************************************************************************************  
@@ -150,7 +150,7 @@ main {
 
 .edit_cuenta {
   display: flex;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .edit_cuenta .edit {
@@ -181,7 +181,7 @@ main {
 
 .conteiner-horizontal-center {
   display: flex;
-  margin-top: 150px;
+  margin-top:50px;
 }
 
 .conteiner-horizontal-center .children1 {
@@ -212,7 +212,7 @@ main {
 /* Estilo para botones Register y Login*/
 ul.hmenu {
   list-style: none;
-  margin: 0 0 2em;
+  margin: 5 0;
   padding: 0;
 }
 
@@ -237,6 +237,7 @@ ul.hmenu li a:hover{
 }
 
 ul.hmenu p{
+  padding: 5px 0px;
   font: Roboto;
   font-size: 15px;
   color: #410401;

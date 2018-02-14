@@ -19,6 +19,6 @@
 //= require angular-route/angular-route
 //= require angular-rails-templates
 //= require_tree .
-// =  require dataTables / jquery.dataTables
+//= require dataTables/jquery.dataTables
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
