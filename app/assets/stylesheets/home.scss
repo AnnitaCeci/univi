@@ -212,15 +212,16 @@ main {
 /* Estilo para botones Register y Login*/
 ul.hmenu {
   list-style: none;
-  margin: 5 0;
-  padding: 0;
+  margin: 0px 0px 15px 0px;
+  padding: 0px;
 }
 
 ul.hmenu li {
   display: inline;
   background: #410401;
   padding: 8px 14px;
-  border-radius: 6px; 
+  border-radius: 6px;
+  margin: 0px 0px 10px 0px; 
 }
 
 ul.hmenu li:hover {
@@ -237,10 +238,11 @@ ul.hmenu li a:hover{
 }
 
 ul.hmenu p{
-  padding: 10px 0px;
+  padding: 10px 0px 10px 0px;
   font: Roboto;
   font-size: 15px;
   color: #410401;
+  margin: 5px 0px 5px 0px;
 }
 
 .center-align {

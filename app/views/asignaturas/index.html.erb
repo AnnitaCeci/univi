@@ -2,7 +2,7 @@
 
 <h1>Asignaturas</h1>
 
-<table>
+<table id="asignaturas">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -31,3 +31,9 @@
 <br>
 
 <%= link_to 'New Asignatura', new_asignatura_path %>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+         $("#asignaturas").dataTable();
+    });    
+</script>

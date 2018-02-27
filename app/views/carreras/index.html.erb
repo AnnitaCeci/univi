@@ -2,7 +2,7 @@
 
 <h1>Carreras</h1>
 
-<table>
+<table id="carreras">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -27,3 +27,9 @@
 <br>
 
 <%= link_to 'New Carrera', new_carrera_path %>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+         $("#carreras").dataTable();
+    });    
+</script>
