@@ -3,27 +3,35 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
 <div class="container">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#">Home</a></li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuraciones <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a href='carreras#index'>Carreras</a></li>
-        <li><a href="semesters#index">Semestres</a></li>                        
-        <li><a href="plan_estudios#index">Planes de Estudio</a></li>
-        <li><a href="asignaturas#index"> Asignaturas </a></li>
-      </ul>
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Home</a>
     </li>
-    <li><a href="#">Profesores</a></li>
-    <li><a href="#">Inscripciones</a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Configuraciones</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="carreras#index">Carreras</a>
+        <a class="dropdown-item" href="semester#index">Semestres</a>
+        <a class="dropdown-item" href="plan_estudios#index">Planes de Estudio</a>
+        <a class="dropdown-item" href="asignaturas#index">Asignaturas</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Profesores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Inscripciones</a>
+    </li>
   </ul>
 </div>
 

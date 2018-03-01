@@ -2,7 +2,7 @@
 
 <h1>Plan Estudios</h1>
 
-<table>
+<table id='planes'>
   <thead>
     <tr>
       <th>Clave</th>
@@ -24,10 +24,14 @@
         <td><%= link_to 'Edit', edit_plan_estudio_path(plan_estudio) %></td>
         <td><%= link_to 'Destroy', plan_estudio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <% end %> 
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Plan Estudio', new_plan_estudio_path %>
+<script type="text/javascript">
+    $(document).ready(function() {
+         $("#planes").dataTable();
+    });    
+</script>

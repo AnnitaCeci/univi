@@ -2,7 +2,7 @@
 
 <h1>Semesters</h1>
 
-<table>
+<table id="semestres">
   <thead>
     <tr>
       <th>Clave</th>
@@ -27,3 +27,9 @@
 <br>
 
 <%= link_to 'New Semester', new_semester_path %>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+         $("#semestres").dataTable();
+    });    
+</script>

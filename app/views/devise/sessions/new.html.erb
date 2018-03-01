@@ -20,18 +20,13 @@
           <% if devise_mapping.rememberable? -%>
                 <%= f.check_box :remember_me %>
                 <%= f.label "Recordar" %>
-
           <% end -%>
         </div>
         </br>
-
           <div  class="btn waves-effect waves-light actions">
             <%= f.submit "Ingresar" %>
             <i class="material-icons">send</i>
           </div>
-
-
-
       <% end %>
       </br>
     <%= render "devise/shared/links" %>
