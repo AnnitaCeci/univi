@@ -1,0 +1,2 @@
+module PlanEstudiosHelper
+end

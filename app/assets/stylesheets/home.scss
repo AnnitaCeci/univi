@@ -21,31 +21,27 @@ body{
   overflow: hidden;
 }
 
-header{
-  height: 150px;
-  background: #E57661;
+#header{
+  height: 156px;
+  display: block;
+  background: #fff;
+}
+#nav{
+  display: block;
+  margin: 0px;
+  height: 60px;
+  background-color: rgb(41,24,1);
 }
 
-header h1{
-  font-size: 50px;
+#nav h2{
+  font-size: 20px;
+  color: #FFF;
   text-align: center;
-  line-height: 150px;
-}
-
-nav{
-  background: rgb(41,24,1);
-  height: 80px;
-}
-
-nav h2{
-  font-size: 40px;
-  text-align: center;
-  line-height: 60px;
 }
 
 #contenido {
   width: 950px;
-  height: 500px;
+  height: 600px;
   float: left;
   background: #FFFFCC;
   margin-top: 10px;
@@ -61,7 +57,7 @@ nav h2{
 
 aside {
   width: 325px;
-  height: 500px;
+  height: 600px;
   background: #410401;
   margin-top: 10px;
   float: right;
@@ -74,7 +70,7 @@ aside h2{
 }
 
 footer {
-  background: #E57661;
+  background: #FFF;
   clear: both;
 }
 
@@ -85,7 +81,9 @@ footer {
   font-style: italic;
 }
 
-
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
 /* Estilos para el login*/
 #new_user {
   width: 340px;
@@ -98,13 +96,14 @@ footer {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-main {
+main {                /* Estilo para la ubicación de las ventanas de login en el centro del contenido al lado izquierdo*/
+  float: left;
   height: 100%;
 }
 
 .conteiner-vertical-center {
   display: flex;
-  margin-top: 200px;
+  margin-top: 10px;
 }
 
 .conteiner-vertical-center .children {
@@ -113,15 +112,144 @@ main {
   height: 600px;
   background: #FFFFCC;
   border-radius: 10px;
+}
+
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
+
+/* Estilos para la vista de registrar */
+
+#logotipo1 {
+  width: 400px;
+  height: 150px;
+  background: #410401;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#logotipo1 h2 {
+ color: #FFF;
+}
+
+/* ************   EDITAR CUENTA  *******************   */
+
+#edit_user {
+  width: 80%;
+  padding: 6px 12px;
+}
+#edit_ico {
+  width: 400px;
+  background: #410401;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main {
+  height: 100%;
+}
+
+.edit_cuenta {
+  display: flex;
+  margin-top: 0px;
+}
+
+.edit_cuenta .edit {
+  margin: auto;
+  width: 400px;
+  height: 800x;
+  background: #FFFFCC;
+  border-radius: 10px;
+
+}
+.button_to input{
+  background: #26a69a;
+  padding: 8px 14px;
+  border-radius: 6px; 
+  color: #fff;
+}
+
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
+
+/* Estilos para la vista ¿Olvidaste tu contraseña? */
+
+
+main {
+  height: 100%;
+}
+
+.conteiner-horizontal-center {
+  display: flex;
+  margin-top:50px;
+}
+
+.conteiner-horizontal-center .children1 {
+  margin: auto;
+  width: 450px;
+  height: 400px;
+  background: #FFFFCC;
+  border-radius: 10px;
 
 }
 
+#logotipo2 {
+  width: 450px;
+  background: #410401;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+#logotipo2 h2{
+  color: #FFF;
+}
+
+/* **************************************************************************************************************  
+***************************************************************************************************************
+**********************************  */
+
+/* Estilo para botones Register y Login*/
 ul.hmenu {
   list-style: none;
-  margin: 0 0 2em;
-  padding: 0;
+  margin: 0px 0px 15px 0px;
+  padding: 0px;
 }
 
 ul.hmenu li {
   display: inline;
+  background: #410401;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin: 0px 0px 10px 0px; 
+}
+
+ul.hmenu li:hover {
+  background: #B22222;
+}
+
+ul.hmenu li a{
+  color: #fff;
+}
+
+ul.hmenu li a:hover{
+  background: #B22222;
+  color: #fff;
+}
+
+ul.hmenu p{
+  padding: 10px 0px 10px 0px;
+  font: Roboto;
+  font-size: 15px;
+  color: #410401;
+  margin: 5px 0px 5px 0px;
+}
+
+.center-align {
+  display: inline;
+  float: left;
+}
+.right align {
+  display: inline;
+  float: right;
 }

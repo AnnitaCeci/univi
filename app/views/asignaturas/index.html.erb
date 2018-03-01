@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Asignaturas</h1>
+
+<table id="asignaturas">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Clave</th>
+      <th>Creditos</th>
+      <th>Horas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asignaturas.each do |asignatura| %>
+      <tr>
+        <td><%= asignatura.nombre %></td>
+        <td><%= asignatura.clave %></td>
+        <td><%= asignatura.creditos %></td>
+        <td><%= asignatura.horas %></td>
+        <td><%= link_to 'Show', asignatura %></td>
+        <td><%= link_to 'Edit', edit_asignatura_path(asignatura) %></td>
+        <td><%= link_to 'Destroy', asignatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asignatura', new_asignatura_path %>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+         $("#asignaturas").dataTable();
+    });    
+</script>

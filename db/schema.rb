@@ -10,10 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171110000454) do
+ActiveRecord::Schema.define(version: 20171216010329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "asignaturas", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "clave"
+    t.integer  "creditos"
+    t.integer  "horas"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carreras", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "clave"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "periodos", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "inicio"
+    t.string   "fin"
+    t.string   "tipo"
+    t.boolean  "current"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "plan_estudios", force: :cascade do |t|
+    t.string   "clave"
+    t.string   "semestre"
+    t.string   "inicio_vigencia"
+    t.string   "fin_vigencia"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "carrera_id"
+    t.index ["carrera_id"], name: "index_plan_estudios_on_carrera_id", using: :btree
+  end
+
+  create_table "semesters", force: :cascade do |t|
+    t.integer  "clave"
+    t.string   "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,4 +76,5 @@ ActiveRecord::Schema.define(version: 20171110000454) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "plan_estudios", "carreras"
 end

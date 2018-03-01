@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @asignatura.nombre %>
+</p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @asignatura.clave %>
+</p>
+
+<p>
+  <strong>Creditos:</strong>
+  <%= @asignatura.creditos %>
+</p>
+
+<p>
+  <strong>Horas:</strong>
+  <%= @asignatura.horas %>
+</p>
+
+<%= link_to 'Edit', edit_asignatura_path(@asignatura) %> |
+<%= link_to 'Back', asignaturas_path %>

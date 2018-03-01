@@ -6,7 +6,7 @@
       </div>
       <br><br>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="input-field col s12 center-align">
+          <div class="input-field col s12">
             <%= f.label "Correo" %><br />
             <%= f.email_field :email, autofocus: true %>
           </div>
@@ -20,18 +20,13 @@
           <% if devise_mapping.rememberable? -%>
                 <%= f.check_box :remember_me %>
                 <%= f.label "Recordar" %>
-
           <% end -%>
         </div>
         </br>
-
           <div  class="btn waves-effect waves-light actions">
             <%= f.submit "Ingresar" %>
-            <i class="material-icons right">send</i>
+            <i class="material-icons">send</i>
           </div>
-
-
-
       <% end %>
       </br>
     <%= render "devise/shared/links" %>

@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require datatables
+//= require rails-ujs
+//= require turbolinks
 //= require jquery_ujs
 //= require angular/angular
 //= require angular-route/angular-route

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @plan_estudio.clave %>
+</p>
+
+<p>
+  <strong>Semestre:</strong>
+  <%= @plan_estudio.semestre %>
+</p>
+
+<p>
+  <strong>Inicio vigencia:</strong>
+  <%= @plan_estudio.inicio_vigencia %>
+</p>
+
+<p>
+  <strong>Fin vigencia:</strong>
+  <%= @plan_estudio.fin_vigencia %>
+</p>
+
+<%= link_to 'Edit', edit_plan_estudio_path(@plan_estudio) %> |
+<%= link_to 'Back', plan_estudios_path %>
