@@ -60,3 +60,7 @@ gem 'jquery-rails'
 gem 'jquery-datatables', '~> 1.10', '>= 1.10.16'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+gem 'spring-watcher-listen', '~> 2.0.0'
+gem 'rb-inotify', '~> 0.9.10'
