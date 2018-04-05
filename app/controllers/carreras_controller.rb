@@ -28,7 +28,7 @@ class CarrerasController < ApplicationController
 
     respond_to do |format|
       if @carrera.save
-        format.html { redirect_to @carrera, notice: 'Carrera was successfully created.' }
+        format.html { redirect_to @carrera, notice: 'La carrera se agrego de manera correcta.' }
         format.json { render :show, status: :created, location: @carrera }
       else
         format.html { render :new }

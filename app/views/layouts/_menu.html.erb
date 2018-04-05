@@ -3,17 +3,44 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
 
 <div class="container">
-  <ul class="nav nav-tabs">
+  <div class="row">
+    <div class="col xl12 l12 m12 s12">
+      <nav class="color-fondo">
+        <div class="nav-wrapper">
+          <div class="center-align col xl4 l4 m12 s12">
+            <a href="#" class="dropdown-button" data-activates='dropdown1'>
+              <span class="color-texto">Configuraciones</span><i class="material-icons icons-menu color-icons">arrow_drop_down</i>
+            </a>
+            <ul id='dropdown1' class='dropdown-content lista-size'>
+              <li><a href="carreras#index"><span class="color-texto">Carreras</span></a></li>
+              <li><a href="semester#index"><span class="color-texto">Semestres</span></a></li>
+              <li><a href="plan_estudios#index"><span class="color-texto">Planes de Estudio</span></a></li>
+              <li><a href="asignaturas#index"><span class="color-texto">Asignaturas</span></a></li>
+            </ul>
+          </div>
+          <div class="center-align col xl4 l4 m12 s12">
+            <a href="#" class="">
+              <span class="color-texto">Profesores</span>
+            </a>
+          </div>
+          <div class="center-align col xl4 l4 m12 s12">
+            <a href="#" class="">
+              <span class="color-texto">Inscripciones</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+<!--  <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" href="#">Home</a>
     </li>
@@ -32,8 +59,13 @@
     <li class="nav-item">
       <a class="nav-link" href="#">Inscripciones</a>
     </li>
-  </ul>
+  </ul>-->
 </div>
 
+
+<script>
+    $(".button-collapse").sideNav();
+    $(".dropdown-button").dropdown();
+</script>
 </body>
 </html>

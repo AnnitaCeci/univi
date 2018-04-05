@@ -1,17 +1,82 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-*{
-  margin: 0px;
-  padding: 0px;
-}
 
 body{
-  background: #9C5811;
-  height: 100%;
+  background: rgba(231, 228, 227, 0.88);
+
 }
 
+
+footer {
+  background-color: #986d62 !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.color-fondo {
+  background: rgba(255, 255, 255, 1);
+}
+
+.fondo-nav{
+  background: #6d4c41;
+}
+
+.color-texto{
+  color: #37474f;
+  font-size: 18px;
+}
+
+.icons-menu {
+  display: inline-block !important;
+  margin-top: 15px;
+  margin-left: 5px;
+  line-height: 18px !important;
+  height: 18px !important;
+}
+
+.hr-estilo{
+  height: 70%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-estilo {
+  max-height: 70% !important;
+  width: 40% !important;
+  margin-top: 5%;
+}
+
+.lista-size {
+  width: 250px !important;
+}
+
+
+.color-icons{
+  color: #410401;
+}
+
+
+@media only screen and (min-width: 1709px) {
+  .boton-carrera {
+    right: -82.5% !important;
+  }
+
+  .boton-plan {
+    right: -85.8% !important;
+  }
+
+  .boton-materias {
+    right: -83% !important;
+  }
+}
+
+
+
+
+/******************Estilos viejos - eliminar despues******************/
 /*Estilos para la parte de control*/
+/*
 #contenedor{
   width: 1300px;
   margin: auto;
@@ -80,11 +145,13 @@ footer {
   padding: 20px;
   font-style: italic;
 }
+*/
 
 /* **************************************************************************************************************  
 ***************************************************************************************************************
 **********************************  */
 /* Estilos para el login*/
+/*
 #new_user {
   width: 340px;
   padding: 6px 12px;
@@ -96,7 +163,7 @@ footer {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-main {                /* Estilo para la ubicación de las ventanas de login en el centro del contenido al lado izquierdo*/
+main {                !* Estilo para la ubicación de las ventanas de login en el centro del contenido al lado izquierdo*!
   float: left;
   height: 100%;
 }
@@ -113,12 +180,14 @@ main {                /* Estilo para la ubicación de las ventanas de login en e
   background: #FFFFCC;
   border-radius: 10px;
 }
+*/
 
 /* **************************************************************************************************************  
 ***************************************************************************************************************
 **********************************  */
 
 /* Estilos para la vista de registrar */
+/*
 
 #logotipo1 {
   width: 400px;
@@ -131,8 +200,10 @@ main {                /* Estilo para la ubicación de las ventanas de login en e
 #logotipo1 h2 {
  color: #FFF;
 }
+*/
 
 /* ************   EDITAR CUENTA  *******************   */
+/*
 
 #edit_user {
   width: 80%;
@@ -167,6 +238,7 @@ main {
   border-radius: 6px; 
   color: #fff;
 }
+*/
 
 /* **************************************************************************************************************  
 ***************************************************************************************************************
@@ -174,7 +246,7 @@ main {
 
 /* Estilos para la vista ¿Olvidaste tu contraseña? */
 
-
+/*
 main {
   height: 100%;
 }
@@ -203,13 +275,14 @@ main {
 
 #logotipo2 h2{
   color: #FFF;
-}
+}*/
 
 /* **************************************************************************************************************  
 ***************************************************************************************************************
 **********************************  */
 
 /* Estilo para botones Register y Login*/
+/*
 ul.hmenu {
   list-style: none;
   margin: 0px 0px 15px 0px;
@@ -252,4 +325,4 @@ ul.hmenu p{
 .right align {
   display: inline;
   float: right;
-}
+}*/

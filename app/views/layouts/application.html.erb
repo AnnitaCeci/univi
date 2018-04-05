@@ -6,11 +6,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/app/assets/stylesheets/materialize.min.css">
     <div id="contenedor" ng-app="univi">
       <div id="header">
-         <img src="/assets/uvirtual-ea01ed0a7b5391a1983b601e2800536a6c49ad3b85bf61f2f1fd5f06289d698e.gif" alt="Uvirtual" width="1300" height="150" />
+        <%= render '/layouts/header' %>
       </div>
-    <div class="right-align">
+    <!--<div class="right-align">
       <ul class="hmenu">
         <%= render 'devise/menu/registration_items' %>
         <%= render 'devise/menu/login_items' %>
@@ -18,27 +19,31 @@
         <p>Bienvenido : <b><%= current_user.email %></b></p>
           <%end%>
       </ul>
+    </div>-->
     </div>
-    <div id="nav">
+    <br><br>
+    <div class="row">
       <%= render '/layouts/menu' %>
     </div>
   </head>
 
   <body>
-    <section id="contenido">
-      <article>
-         <%= yield %>
-        <div class="center-align">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+  <div class="container">
+    <div class="row">
+      <div class="col xl12 l12 m12 s12">
+        <div class="card-panel  color-fondo">
+          <%= yield %>
         </div>
-      </article>
-    </section>
-    <aside>
-      <h2>Publicidad</h2>
-    </aside>
+      </div>
+      <div class="center-align">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    </div>
+  </div>
   </body>
-  <footer>
-    <label>Carretera a Acatlima Km. 2.5</label>
+
+  <footer class="page-footer">
+    <%= render 'layouts/footer' %>
   </footer>
 </html>
