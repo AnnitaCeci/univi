@@ -19,3 +19,7 @@
 \.idea/\.generators
 
 \.idea/
+
+Gemfile
+
+*.lock
