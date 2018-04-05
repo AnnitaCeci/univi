@@ -10,7 +10,7 @@ body{
 
 footer {
   background-color: #986d62 !important;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -68,6 +68,15 @@ footer {
 
   .boton-materias {
     right: -83% !important;
+  }
+
+  .boton-regresar {
+    right: -88% !important;
+    background: rgba(8, 107, 126, 0.61) !important;
+  }
+
+  .boton-aceptar {
+    right: -88.5% !important;
   }
 }
 

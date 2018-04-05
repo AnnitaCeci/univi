@@ -1,5 +1,17 @@
-<h1>New Carrera</h1>
+<div class="row">
+  <div class="col l6">
+    <h3>Agregar una Nueva Carrera</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col xl12 l12 m12 s12">
+    <%= link_to 'Regresar', carreras_path,  { :class=>"waves-effect waves-blue btn  boton-regresar"} %>
+  </div>
+</div>
+
+<hr>
 
 <%= render 'form', carrera: @carrera %>
 
-<%= link_to 'Back', carreras_path %>
+

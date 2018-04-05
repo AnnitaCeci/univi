@@ -28,8 +28,8 @@ class CarrerasController < ApplicationController
 
     respond_to do |format|
       if @carrera.save
-        format.html { redirect_to @carrera, notice: 'La carrera se agrego de manera correcta.' }
-        format.json { render :show, status: :created, location: @carrera }
+        format.html { redirect_to carreras_url, notice: 'La carrera se agrego de manera correcta.' }
+        format.json { head :no_content  }
       else
         format.html { render :new }
         format.json { render json: @carrera.errors, status: :unprocessable_entity }
@@ -42,8 +42,8 @@ class CarrerasController < ApplicationController
   def update
     respond_to do |format|
       if @carrera.update(carrera_params)
-        format.html { redirect_to @carrera, notice: 'Carrera was successfully updated.' }
-        format.json { render :show, status: :ok, location: @carrera }
+        format.html { redirect_to carreras_url, notice: 'Carrera was successfully updated.' }
+        format.json { head :no_content }
       else
         format.html { render :edit }
         format.json { render json: @carrera.errors, status: :unprocessable_entity }
