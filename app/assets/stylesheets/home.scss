@@ -4,12 +4,13 @@
 
 body{
   background: rgba(231, 228, 227, 0.88);
+  font-family: 'lato', sans-serif;
 
 }
 
 
 footer {
-  background-color: #986d62 !important;
+  background: linear-gradient(to bottom, #621B18, #511210);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -20,7 +21,7 @@ footer {
 }
 
 .fondo-nav{
-  background: #6d4c41;
+  background: linear-gradient(to bottom, #621B18, #511210);
 }
 
 .color-texto{
@@ -79,7 +80,6 @@ footer {
     right: -88.5% !important;
   }
 }
-
 
 
 
