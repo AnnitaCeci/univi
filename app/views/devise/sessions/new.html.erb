@@ -46,10 +46,9 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= f.text_field :email, autofocus: true, placeholder: "Correo" %>
       <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña" %>
-      <a href="#" btn="primary">Ingresar</a>
       <%= f.submit "Ingresar", btn: "primary" %>
     <% end %>
     <br>
-    <a href="#" class="subtitle">¿Olvido su Contraseña?</a>
+    <%= render "devise/shared/links" %>
   </div>
 </div>
