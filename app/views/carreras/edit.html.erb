@@ -1,6 +1,24 @@
-<h1>Editing Carrera</h1>
+<!--<h1>Editing Carrera</h1>
+
+<%#= render 'form', carrera: @carrera %>
+
+<%#= link_to 'Show', @carrera %> |
+<%#= link_to 'Back', carreras_path %>-->
+
+
+
+<div class="row">
+  <div class="col l6">
+    <h3>Editar Carrera</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col xl12 l12 m12 s12">
+    <%= link_to 'Regresar', carreras_path,  { :class=>"waves-effect waves-blue btn  boton-regresar"} %>
+  </div>
+</div>
+
+<hr>
 
 <%= render 'form', carrera: @carrera %>
-
-<%= link_to 'Show', @carrera %> |
-<%= link_to 'Back', carreras_path %>

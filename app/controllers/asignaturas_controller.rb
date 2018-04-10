@@ -1,5 +1,6 @@
 class AsignaturasController < ApplicationController
   before_action :set_asignatura, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /asignaturas
   # GET /asignaturas.json

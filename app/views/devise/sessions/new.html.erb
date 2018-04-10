@@ -1,3 +1,4 @@
+<!--
 <main class="conteiner-vertical-center">
   <div class="children" align="center">
 
@@ -32,4 +33,22 @@
     <%= render "devise/shared/links" %>
   </div>
 
-</main>
+</main>-->
+
+
+<div grid>
+  <div card="back">
+    <p class="headline">Universidad Tecnológica<br>de la Mixteca</p>
+    <p class="txt-body">División Universidad Virtual</p>
+  </div>
+  <div card="front">
+    <p class="title">Acceso</p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.text_field :email, autofocus: true, placeholder: "Correo" %>
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña" %>
+      <%= f.submit "Ingresar", btn: "primary" %>
+    <% end %>
+    <br>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
