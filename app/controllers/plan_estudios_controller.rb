@@ -1,5 +1,6 @@
 class PlanEstudiosController < ApplicationController
   before_action :set_plan_estudio, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /plan_estudios
   # GET /plan_estudios.json

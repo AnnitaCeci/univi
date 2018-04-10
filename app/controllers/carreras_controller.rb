@@ -1,5 +1,6 @@
 class CarrerasController < ApplicationController
   before_action :set_carrera, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /carreras
   # GET /carreras.json

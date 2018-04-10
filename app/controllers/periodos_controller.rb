@@ -1,5 +1,6 @@
 class PeriodosController < ApplicationController
   before_action :set_periodo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /periodos
   # GET /periodos.json
