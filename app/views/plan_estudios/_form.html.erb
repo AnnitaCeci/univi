@@ -31,19 +31,10 @@
     <%= f.text_field :fin_vigencia %>
   </div>
 
-<div class="field">
+  <div class="field">
     <%= f.label :carrera_id %>
-    <%= f.collection_select(:carrera_id, Carrera.all , :id, :nombre)  %>
+    <%= f.collection_select :carrera_id, Carrera.all, :id, :nombre, { prompt: "Seleccione una Carrera" }, class: "browser-default" %>
   </div>
-
-<div class="field">
-<%= f.select(:carrera_id) do %>
-  <% @carreras.each do |c| -%>
-    <%= content_tag(:option, c.id, value: c.nombre) %>
-  <% end %>
-<% end %>
-</div>
-
 
   <div class="actions">
     <%= f.submit %>
