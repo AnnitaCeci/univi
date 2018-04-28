@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Inscripciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alumno</th>
+      <th>Periodo</th>
+      <th>Plan estudio</th>
+      <th>Semestre</th>
+      <th>Beca</th>
+      <th>Promedio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.alumno.nombre + " " + record.alumno.apellido_paterno + " "+ record.alumno.apellido_materno %></td>
+        <td><%= record.periodo.nombre %></td>
+        <td><%= record.plan_estudio.clave + "-" + record.plan_estudio.carrera.nombre %></td>
+        <td><%= record.semester.clave %></td>
+        <td><%= record.studentship %></td>
+        <td><%= record.average %></td>
+        <td><%= link_to 'Show', record %></td>
+        <td><%= link_to 'Edit', edit_record_path(record) %></td>
+        <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Inscripción', new_record_path %>

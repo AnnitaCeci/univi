@@ -1,0 +1,51 @@
+<%= form_with(model: record, local: true) do |form| %>
+  <% if record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+      <% record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :alumno_id %>
+    <%#= form.text_field :alumno_id, id: :record_alumno_id %>
+    <%= form.collection_select :alumno_id, Alumno.all, :id, :nombre, { prompt: "Seleccione un Alumno" }, class: "browser-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periodo_id %>
+    <%#= form.text_field :periodo_id, id: :record_periodo_id %>
+    <%= form.collection_select :periodo_id, Periodo.all, :id, :nombre, { prompt: "Seleccione un Periodo" }, class: "browser-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plan_estudio_id %>
+    <%#= form.text_field :plan_estudio_id, id: :record_plan_estudio_id %>
+    <%= form.collection_select :plan_estudio_id, PlanEstudio.all, :id, :clave, { prompt: "Seleccione un Plan de Estudio" }, class: "browser-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :semester_id %>
+    <%#= form.text_field :semester_id, id: :record_semester_id %>
+    <%= form.collection_select :semester_id, Semester.all, :id, :clave, { prompt: "Seleccione un Semestre" }, class: "browser-default" %>
+  </div>
+
+ <!-- <div class="field">
+    <%= form.label :studentship %>
+    <%= form.number_field :studentship, id: :record_studentship %>
+  </div>-->
+
+<!--  <div class="field">
+    <%= form.label :average %>
+    <%= form.text_field :average, id: :record_average %>
+  </div>-->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

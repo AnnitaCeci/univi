@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rfc:</strong>
+  <%= @profesor.rfc %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @profesor.nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @profesor.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @profesor.apellido_materno %>
+</p>
+
+<p>
+  <strong>Grado academico:</strong>
+  <%= @profesor.grado_academico %>
+</p>
+
+<p>
+  <strong>Grado academico abreviado:</strong>
+  <%= @profesor.grado_academico_abreviado %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @profesor.correo %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @profesor.telefono %>
+</p>
+
+<p>
+  <strong>Domicilio:</strong>
+  <%= @profesor.domicilio %>
+</p>
+
+<%= link_to 'Edit', edit_profesor_path(@profesor) %> |
+<%= link_to 'Back', profesors_path %>

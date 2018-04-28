@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @alumno.clave %>
+</p>
+
+<p>
+  <strong>Curp:</strong>
+  <%= @alumno.curp %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @alumno.nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @alumno.apellido_paterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @alumno.apellido_materno %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @alumno.correo %>
+</p>
+
+<%= link_to 'Edit', edit_alumno_path(@alumno) %> |
+<%= link_to 'Back', alumnos_path %>
