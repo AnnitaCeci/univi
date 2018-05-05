@@ -73,6 +73,6 @@ class PlanEstudiosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plan_estudio_params
-      params.require(:plan_estudio).permit(:clave, :semestre, :inicio_vigencia, :fin_vigencia)
+      params.require(:plan_estudio).permit(:clave, :semestre, :inicio_vigencia, :fin_vigencia, :carrera_id)
     end
 end

@@ -9,7 +9,7 @@
       <th>Inicio</th>
       <th>Fin</th>
       <th>Tipo</th>
-      <th>Current</th>
+      <!--<th>Current</th>-->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,7 +21,7 @@
         <td><%= periodo.inicio %></td>
         <td><%= periodo.fin %></td>
         <td><%= periodo.tipo %></td>
-        <td><%= periodo.current %></td>
+        <!--<td><%= periodo.current %></td>-->
         <td><%= link_to 'Show', periodo %></td>
         <td><%= link_to 'Edit', edit_periodo_path(periodo) %></td>
         <td><%= link_to 'Destroy', periodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Periodo', new_periodo_path %>
+<%= link_to 'Nuevo Periodo', new_periodo_path %>

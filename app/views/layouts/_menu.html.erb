@@ -13,17 +13,28 @@
               <li><a href="semester#index"><span class="color-texto">Semestres</span></a></li>
               <li><a href="plan_estudios#index"><span class="color-texto">Planes de Estudio</span></a></li>
               <li><a href="asignaturas#index"><span class="color-texto">Asignaturas</span></a></li>
+              <li><%= link_to "Periodos", periodos_path%></li>
+              <li><%= link_to "Cursos", cursos_path%></li>
             </ul>
           </div>
           <div class="center-align col xl4 l4 m12 s12">
-            <a href="#" class="">
-              <span class="color-texto">Profesores</span>
+            <a href="#" class="dropdown-button" data-activates='dropdown2'>
+              <span class="color-texto">Profesores</span><i class="material-icons icons-menu color-icons">arrow_drop_down</i>
             </a>
+            <ul id='dropdown2' class='dropdown-content lista-size'>
+              <li class="color-texto"><%= link_to "Registro", profesors_path%></li>
+              <li><span class="color-texto">Calificaciones</span></li>
+            </ul>
           </div>
           <div class="center-align col xl4 l4 m12 s12">
-            <a href="#" class="">
-              <span class="color-texto">Inscripciones</span>
+            <a href="#"  class="dropdown-button" data-activates='dropdown3'>
+              <span class="color-texto">Alumnos</span><i class="material-icons icons-menu color-icons">arrow_drop_down</i>
             </a>
+            <ul id='dropdown3' class='dropdown-content lista-size'>
+              <li class="color-texto"><%= link_to "Registro", alumnos_path%></li>
+              <li class="color-texto"><%= link_to "Inscripciones", records_path%></li>
+              <li><span class="color-texto">Registro de Pagos</span></li>
+            </ul>
           </div>
         </div>
       </nav>

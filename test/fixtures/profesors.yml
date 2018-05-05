@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rfc: MyString
+  nombre: MyString
+  apellido_paterno: MyString
+  apellido_materno: MyString
+  grado_academico: MyString
+  grado_academico_abreviado: MyString
+  correo: MyString
+  telefono: MyString
+  domicilio: MyString
+
+two:
+  rfc: MyString
+  nombre: MyString
+  apellido_paterno: MyString
+  apellido_materno: MyString
+  grado_academico: MyString
+  grado_academico_abreviado: MyString
+  correo: MyString
+  telefono: MyString
+  domicilio: MyString

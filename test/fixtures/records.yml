@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alumno: one
+  periodo: one
+  plan_estudio: one
+  semester: one
+  studentship: 1
+  average: 1.5
+
+two:
+  alumno: two
+  periodo: two
+  plan_estudio: two
+  semester: two
+  studentship: 1
+  average: 1.5
