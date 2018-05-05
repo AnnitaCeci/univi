@@ -6,8 +6,8 @@
 </div>
 
 <div class="row">
-  <div class="col xl12 l12 m12 s12">
-    <%= link_to 'Agregar Carrera', new_carrera_path,  { :class=>"waves-effect waves-green btn boton-carrera"} %>
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Agregar Carrera', new_carrera_path,  { :class=>"waves-effect waves-green btn"} %>
   </div>
 </div>
 
@@ -32,7 +32,7 @@
             <td><%= carrera.nombre %></td>
             <!--<td><%#= link_to 'Show', carrera %></td>-->
             <td><%= link_to '<i class="small material-icons color-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Editar">edit</i>'.html_safe, edit_carrera_path(carrera) %></td>
-            <td><%= link_to '<i class="small material-icons color-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Eliminar">delete</i>'.html_safe, carrera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to '<i class="small material-icons color-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Eliminar">delete</i>'.html_safe, carrera, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
           </tr>
         <% end %>
         </tbody>
@@ -44,8 +44,6 @@
 
 <br>
 
-<%#= link_to 'New Carrera', new_carrera_path %>
-
 
 
 <script type="text/javascript">
@@ -55,10 +53,5 @@
 
     $(document).ready(function(){
         $('.tooltipped').tooltip({delay: 50});
-    });
-
-    $(document).ready(function(){
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('.modal-trigger').leanModal();
     });
 </script>

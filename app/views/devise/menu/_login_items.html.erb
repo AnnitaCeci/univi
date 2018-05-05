@@ -1,9 +1,9 @@
 <% if user_signed_in? %>
-    <li>
+    <!--<li>
       <%= link_to('Cerrar sesión', destroy_user_session_path, method: :delete) %>
-    </li>
+    </li>-->
 <% else %>
-    <li>
+   <!-- <li>
       <%= link_to('Iniciar sesión', new_user_session_path)  %>
-    </li>
+    </li>-->
 <% end %>

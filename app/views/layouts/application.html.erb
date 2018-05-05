@@ -3,31 +3,30 @@
   <head>
     <title>Univi</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/app/assets/stylesheets/materialize.min.css">
-    <div id="contenedor" ng-app="univi">
-      <div id="header">
-        <%= render '/layouts/header' %>
-      </div>
+  </head>
+
+  <body>
+  <% if user_signed_in? %>
+  <div id="contenedor">
+    <div id="header">
+      <%= render '/layouts/header' %>
+    </div>
     <div class="right-align">
       <ul class="hmenu">
         <%= render 'devise/menu/registration_items' %>
         <%= render 'devise/menu/login_items' %>
-        <%# if user_signed_in? %>
-        <!--<p>Bienvenido : <b><%#= current_user.email %></b></p>-->
-          <%#end%>
       </ul>
     </div>
-    </div>
-    <br><br>
-    <div class="row">
-      <%= render '/layouts/menu' %>
-    </div>
-  </head>
+  </div>
+  <br><br>
+  <div class="row">
+    <%= render '/layouts/menu' %>
+  </div>
 
-  <body>
   <div class="container">
     <div class="row">
       <div class="col xl12 l12 m12 s12">
@@ -41,9 +40,16 @@
       </div>
     </div>
   </div>
+
+    <footer class="page-footer">
+      <%= render 'layouts/footer' %>
+    </footer>
+  <% else %>
+    <div class="fondo-sesion">
+      <%= yield %>
+    </div>
+  <% end %>
   </body>
 
-  <footer class="page-footer">
-    <%= render 'layouts/footer' %>
-  </footer>
+
 </html>
