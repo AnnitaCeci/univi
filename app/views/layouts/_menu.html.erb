@@ -9,10 +9,10 @@
               <span class="color-texto">Configuraciones</span><i class="material-icons icons-menu color-icons">arrow_drop_down</i>
             </a>
             <ul id='dropdown1' class='dropdown-content lista-size'>
-              <li><a href="carreras#index"><span class="color-texto">Carreras</span></a></li>
-              <li><a href="semester#index"><span class="color-texto">Semestres</span></a></li>
-              <li><a href="plan_estudios#index"><span class="color-texto">Planes de Estudio</span></a></li>
-              <li><a href="asignaturas#index"><span class="color-texto">Asignaturas</span></a></li>
+              <li><%= link_to "Carreras", carreras_path%></li>
+              <li><%= link_to "Semestres", semesters_path%></li>
+              <li><%= link_to "Planes de Estudios", plan_estudios_path%></li>
+              <li><%= link_to "Asignaturas", asignaturas_path%></li>
               <li><%= link_to "Periodos", periodos_path%></li>
               <li><%= link_to "Cursos", cursos_path%></li>
             </ul>
@@ -22,7 +22,7 @@
               <span class="color-texto">Profesores</span><i class="material-icons icons-menu color-icons">arrow_drop_down</i>
             </a>
             <ul id='dropdown2' class='dropdown-content lista-size'>
-              <li class="color-texto"><%= link_to "Registro", profesors_path%></li>
+              <li><%= link_to "Registro", profesors_path%></li>
               <li><span class="color-texto">Calificaciones</span></li>
             </ul>
           </div>
@@ -31,8 +31,8 @@
               <span class="color-texto">Alumnos</span><i class="material-icons icons-menu color-icons">arrow_drop_down</i>
             </a>
             <ul id='dropdown3' class='dropdown-content lista-size'>
-              <li class="color-texto"><%= link_to "Registro", alumnos_path%></li>
-              <li class="color-texto"><%= link_to "Inscripciones", records_path%></li>
+              <li><%= link_to "Registro", alumnos_path%></li>
+              <li><%= link_to "Inscripciones", records_path%></li>
               <li><span class="color-texto">Registro de Pagos</span></li>
             </ul>
           </div>
@@ -40,26 +40,6 @@
       </nav>
     </div>
   </div>
-<!--  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Home</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Configuraciones</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="carreras#index">Carreras</a>
-        <a class="dropdown-item" href="semester#index">Semestres</a>
-        <a class="dropdown-item" href="plan_estudios#index">Planes de Estudio</a>
-        <a class="dropdown-item" href="asignaturas#index">Asignaturas</a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Profesores</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Inscripciones</a>
-    </li>
-  </ul>-->
 </div>
 
 
@@ -68,3 +48,5 @@
     $(".dropdown-button").dropdown();
 </script>
 <% end %>
+
+
