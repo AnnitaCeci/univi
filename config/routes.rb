@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'inscripciones/destroy'
+
   resources :records
   resources :cursos
   resources :profesors
