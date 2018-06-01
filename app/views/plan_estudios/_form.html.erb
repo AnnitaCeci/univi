@@ -1,42 +1,65 @@
-<%= form_for(plan_estudio) do |f| %>
-  <% if plan_estudio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(plan_estudio.errors.count, "error") %> prohibited this plan_estudio from being saved:</h2>
+<br>
+<div class="row">
+  <div class="col xl12 l12 m12 s12">
 
-      <ul>
-      <% plan_estudio.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <%= form_for(plan_estudio) do |f| %>
+        <% if plan_estudio.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(plan_estudio.errors.count, "error") %> prohibited this plan_estudio from being
+                saved:</h2>
 
-  <div class="field">
-    <%= f.label :clave %>
-    <%= f.text_field :clave %>
-  </div>
+              <ul>
+                <% plan_estudio.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
 
-  <div class="field">
-    <%= f.label :semestre %>
-    <%= f.text_field :semestre %>
-  </div>
+        <div class="row">
+          <div class="col xl3 l3 m12 s12">
+            <div class="input">
+              <%= f.label :clave %>
+              <%= f.text_field :clave %>
+            </div>
+          </div>
+          <div class="col xl3 l3 m12 s12">
+            <div class="field">
+              <%= f.label :semestre %>
+              <%= f.text_field :semestre %>
+            </div>
+          </div>
+          <div class="col xl6 l6 m12 s12">
+            <div class="input">
+              <%= f.label :carrera_id %>
+              <%= f.collection_select :carrera_id, Carrera.all, :id, :nombre, {prompt: "Seleccione una Carrera"}, class: "browser-default" %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col xl6 l6 m12 s12">
+            <div class="field">
+              <%= f.label :inicio_vigencia %>
+              <%= f.text_field :inicio_vigencia %>
+            </div>
 
-  <div class="field">
-    <%= f.label :inicio_vigencia %>
-    <%= f.text_field :inicio_vigencia %>
-  </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :fin_vigencia %>
-    <%= f.text_field :fin_vigencia %>
-  </div>
+          <div class="col xl6 l6 m12 s12">
+            <div class="input">
+              <%= f.label :fin_vigencia %>
+              <%= f.text_field :fin_vigencia %>
+            </div>
+          </div>
+        </div>
 
-  <div class="field">
-    <%= f.label :carrera_id %>
-    <%= f.collection_select :carrera_id, Carrera.all, :id, :nombre, { prompt: "Seleccione una Carrera" }, class: "browser-default" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+        <div class="row">
+          <div class="col xl12 l12 m12 s12 right-align">
+            <div class="actions">
+              <%= f.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+            </div>
+          </div>
+        </div>
+    <% end %>

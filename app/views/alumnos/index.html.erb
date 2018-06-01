@@ -24,9 +24,9 @@
         <td><%= alumno.apellido_paterno %></td>
         <td><%= alumno.apellido_materno %></td>
         <td><%= alumno.correo %></td>
-        <td><%= link_to 'Show', alumno %></td>
-        <td><%= link_to 'Edit', edit_alumno_path(alumno) %></td>
-        <td><%= link_to 'Destroy', alumno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', alumno %></td>
+        <td><%= link_to 'Editar', edit_alumno_path(alumno) %></td>
+        <td><%= link_to 'Eliminar', alumno, method: :delete, data: { confirm: 'Esta seguro que desea eliminar al Alumno?' } %></td>
       </tr>
     <% end %>
   </tbody>

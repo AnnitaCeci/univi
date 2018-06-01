@@ -18,9 +18,9 @@
         <td><%= curso.asignatura.nombre %></td>
         <td><%= curso.periodo.nombre %></td>
         <td><%= curso.profesor.nombre + " " + curso.profesor.apellido_paterno + " "+ curso.profesor.apellido_materno%></td>
-        <td><%= link_to 'Show', curso %></td>
-        <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
-        <td><%= link_to 'Destroy', curso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', curso %></td>
+        <td><%= link_to 'Editar', edit_curso_path(curso) %></td>
+        <td><%= link_to 'Eliminar', curso, method: :delete, data: { confirm: '¿Esta seguro que desea eliminar el curso?' } %></td>
       </tr>
     <% end %>
   </tbody>

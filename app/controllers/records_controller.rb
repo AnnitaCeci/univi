@@ -25,15 +25,12 @@ class RecordsController < ApplicationController
   # POST /records.json
   def create
     @record = Record.new(record_params)
-    asignaturas = Asignatura.where(plan_estudio_id: record_params[:plan_estudio_id], semester_id: record_params[:semester_id])
-    cursos = Curso.where(asignatura_id: asignaturas)
-    @record.cursos = cursos
+
 
 
 
     respond_to do |format|
       if @record.save
-
         format.html { redirect_to @record, notice: 'Record was successfully created.' }
         format.json { render :show, status: :created, location: @record }
       else
@@ -60,7 +57,7 @@ class RecordsController < ApplicationController
   # DELETE /records/1
   # DELETE /records/1.json
   def destroy
-    @record.cursos.destroy
+
     @record.destroy
     respond_to do |format|
       format.html { redirect_to records_url, notice: 'Record was successfully destroyed.' }

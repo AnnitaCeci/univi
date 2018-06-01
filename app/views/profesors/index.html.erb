@@ -30,9 +30,9 @@
         <td><%= profesor.correo %></td>
         <td><%= profesor.telefono %></td>
         <td><%= profesor.domicilio %></td>
-        <td><%= link_to 'Show', profesor %></td>
-        <td><%= link_to 'Edit', edit_profesor_path(profesor) %></td>
-        <td><%= link_to 'Destroy', profesor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', profesor %></td>
+        <td><%= link_to 'Editar', edit_profesor_path(profesor) %></td>
+        <td><%= link_to 'Eliminar', profesor, method: :delete, data: { confirm: 'Esta seguro que desea eliminar al Profesor?' } %></td>
       </tr>
     <% end %>
   </tbody>

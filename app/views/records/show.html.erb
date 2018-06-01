@@ -2,33 +2,33 @@
 
 <p>
   <strong>Alumno:</strong>
-  <%= @record.alumno %>
+  <%= @record.alumno.nombre + " " + @record.alumno.apellido_paterno + " " + @record.alumno.apellido_materno %>
 </p>
 
 <p>
   <strong>Periodo:</strong>
-  <%= @record.periodo %>
+  <%= @record.periodo.nombre %>
 </p>
 
 <p>
   <strong>Plan estudio:</strong>
-  <%= @record.plan_estudio %>
+  <%= @record.plan_estudio.clave + " " + @record.plan_estudio.carrera.nombre %>
 </p>
 
 <p>
-  <strong>Semester:</strong>
-  <%= @record.semester %>
+  <strong>Semestre:</strong>
+  <%= @record.semester.clave %>
 </p>
 
 <p>
-  <strong>Studentship:</strong>
+  <strong>Beca::</strong>
   <%= @record.studentship %>
 </p>
 
 <p>
-  <strong>Average:</strong>
+  <strong>Promedio:</strong>
   <%= @record.average %>
 </p>
 
-<%= link_to 'Edit', edit_record_path(@record) %> |
-<%= link_to 'Back', records_path %>
+<%= link_to 'Editar', edit_record_path(@record) %> |
+<%= link_to 'Regresar', records_path %>

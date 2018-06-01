@@ -1,0 +1,2 @@
+class RecordCurso < ApplicationRecord
+end

@@ -22,9 +22,9 @@
         <td><%= periodo.fin %></td>
         <td><%= periodo.tipo %></td>
         <!--<td><%= periodo.current %></td>-->
-        <td><%= link_to 'Show', periodo %></td>
-        <td><%= link_to 'Edit', edit_periodo_path(periodo) %></td>
-        <td><%= link_to 'Destroy', periodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', periodo %></td>
+        <td><%= link_to 'Editar', edit_periodo_path(periodo) %></td>
+        <td><%= link_to 'Eliminar', periodo, method: :delete, data: { confirm: '¿Esta seguro que desea eliminar el periodo?' } %></td>
       </tr>
     <% end %>
   </tbody>
