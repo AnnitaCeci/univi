@@ -1,8 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Periodos</h1>
+<div class="row">
+  <div class="col l4">
+    <h4>Periodos</h4>
+  </div>
+</div>
 
-<table>
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Agregar Periodo', new_periodo_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+
+<hr>
+
+<table  id="periodos" class="highlight centered responsive-table">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -21,15 +33,11 @@
         <td><%= periodo.inicio %></td>
         <td><%= periodo.fin %></td>
         <td><%= periodo.tipo %></td>
-        <!--<td><%= periodo.current %></td>-->
-        <td><%= link_to 'Mostrar', periodo %></td>
-        <td><%= link_to 'Editar', edit_periodo_path(periodo) %></td>
-        <td><%= link_to 'Eliminar', periodo, method: :delete, data: { confirm: '¿Esta seguro que desea eliminar el periodo?' } %></td>
+        <!--<td><%= periodo.current %></td>-->s
+        <td> <%= link_to '<i class="small material-icons color-icons">edit</i>'.html_safe, edit_periodo_path(periodo)  %> </td>
+        <td> <%= link_to '<i class="small material-icons color-icons">delete</i>'.html_safe, periodo, method: :delete, data: { confirm: '¿Está Seguro que desea eliminar el periodo?' } %> </td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Nuevo Periodo', new_periodo_path %>

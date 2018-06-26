@@ -1,8 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Profesors</h1>
 
-<table>
+<div class="row">
+  <div class="col l4">
+    <h4>Profesores</h4>
+  </div>
+</div>
+
+<div class="row show-on-small">
+  <div class="col m12 s12 right-align">
+    <%= link_to 'Agregar Profesor', new_profesor_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+
+<hr>
+
+<table  id="periodos" class="highlight centered  responsive-table">
   <thead>
     <tr>
       <th>Rfc</th>
@@ -30,14 +43,11 @@
         <td><%= profesor.correo %></td>
         <td><%= profesor.telefono %></td>
         <td><%= profesor.domicilio %></td>
-        <td><%= link_to 'Mostrar', profesor %></td>
-        <td><%= link_to 'Editar', edit_profesor_path(profesor) %></td>
-        <td><%= link_to 'Eliminar', profesor, method: :delete, data: { confirm: 'Esta seguro que desea eliminar al Profesor?' } %></td>
+        <td> <%= link_to '<i class="small material-icons color-icons">edit</i>'.html_safe, edit_profesor_path(profesor)  %> </td>
+        <td> <%= link_to '<i class="small material-icons color-icons">delete</i>'.html_safe, profesor, method: :delete, data: { confirm: '¿Está Seguro que desea eliminar al profesor?' } %> </td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'Nuevo Profesor', new_profesor_path %>
