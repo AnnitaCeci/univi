@@ -1,8 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Inscripciones</h1>
+<div class="row">
+  <div class="col l4">
+    <h4>Inscripciones</h4>
+  </div>
+</div>
 
-<table>
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Nueva Inscripción', new_record_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+
+<hr>
+<table id="records" class="highlight centered responsive-table">
   <thead>
     <tr>
       <th>Alumno</th>
@@ -32,6 +43,3 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'Nueva Inscripción', new_record_path %>
