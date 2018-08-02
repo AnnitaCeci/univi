@@ -1,3 +1,6 @@
+<br>
+<div class="row">
+  <div class="col xl12 l12 m12 s12">
 <%= form_for(periodo) do |f| %>
   <% if periodo.errors.any? %>
     <div id="error_explanation">
@@ -33,7 +36,14 @@
 
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="row">
+        <div class="col xl12 l12 m12 s12 right-align">
+          <div class="actions">
+            <%= f.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+          </div>
+        </div>
+      </div>
+
 <% end %>
+  </div>
+</div>

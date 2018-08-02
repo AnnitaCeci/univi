@@ -41,7 +41,11 @@
     <%= form.text_field :correo, id: :alumno_correo %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="row">
+    <div class="col xl12 l12 m12 s12 right-align">
+      <div class="actions">
+        <%= form.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+      </div>
+    </div>
   </div>
 <% end %>

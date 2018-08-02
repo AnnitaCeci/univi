@@ -32,7 +32,7 @@ class PlanEstudiosController < ApplicationController
     @plan_estudio.carrera = carrera
     respond_to do |format|
       if @plan_estudio.save
-        format.html { redirect_to @plan_estudio, notice: 'Plan estudio was successfully created.' }
+        format.html { redirect_to @plan_estudio, notice: 'Plan estudio se ha creado exitosamente.' }
         format.json { render :show, status: :created, location: @plan_estudio }
       else
         format.html { render :new }

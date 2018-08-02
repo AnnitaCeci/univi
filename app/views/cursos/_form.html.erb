@@ -1,4 +1,8 @@
-<%= form_with(model: curso, local: true) do |form| %>
+<br>
+<div class="row">
+  <div class="col xl12 l12 m12 s12">
+
+  <%= form_with(model: curso, local: true) do |form| %>
   <% if curso.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(curso.errors.count, "error") %> prohibited this curso from being saved:</h2>
@@ -30,7 +34,14 @@
     <%= form.collection_select :profesor_id, Profesor.all, :id, :nombre, { prompt: "Seleccione un Profesor" }, class: "browser-default" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="row">
+    <div class="col xl12 l12 m12 s12 right-align">
+      <div class="actions">
+        <%= form.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+      </div>
+    </div>
   </div>
 <% end %>
+
+  </div>
+</div>

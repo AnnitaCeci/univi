@@ -29,7 +29,7 @@ class PeriodosController < ApplicationController
 
     respond_to do |format|
       if @periodo.save
-        format.html { redirect_to @periodo, notice: 'Periodo was successfully created.' }
+        format.html { redirect_to @periodo, notice: 'Periodo se ha creado exitosamente.' }
         format.json { render :show, status: :created, location: @periodo }
       else
         format.html { render :new }

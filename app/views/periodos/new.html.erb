@@ -1,5 +1,15 @@
-<h1>Nuevo Periodo</h1>
+<div class="row">
+  <div class="col xl12 l12 m12 s12 ">
+    <h4>Nuevo Periodo</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Regresar',periodos_path,  { :class=>"waves-effect waves-blue btn"} %>
+  </div>
+</div>
 
 <%= render 'form', periodo: @periodo %>
 
-<%= link_to 'Back', periodos_path %>
+

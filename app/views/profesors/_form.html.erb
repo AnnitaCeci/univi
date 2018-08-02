@@ -1,4 +1,9 @@
-<%= form_with(model: profesor, local: true) do |form| %>
+<br>
+<div class="row">
+  <div class="col xl12 l12 m12 s12">
+
+
+  <%= form_with(model: profesor, local: true) do |form| %>
   <% if profesor.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profesor.errors.count, "error") %> prohibited this profesor from being saved:</h2>
@@ -10,53 +15,75 @@
       </ul>
     </div>
   <% end %>
-
+      <div class="row">
+        <div class="col xl3 l3 m12 s12">
   <div class="field">
     <%= form.label :rfc %>
     <%= form.text_field :rfc, id: :profesor_rfc %>
   </div>
+        </div>
+        <div class="col xl3 l3 m12 s12">
+        <div class="field">
+          <%= form.label :grado_academico %>
+          <%= form.text_field :grado_academico, id: :profesor_grado_academico %>
+        </div>
+        </div>
+        <div class="col xl3 l3 m12 s12">
+        <div class="field">
+          <%= form.label :grado_academico_abreviado %>
+          <%= form.text_field :grado_academico_abreviado, id: :profesor_grado_academico_abreviado %>
+        </div>
+        </div>
+      </div>
+        <div class="row">
+
+        <div class="col xl4 l4 m12 s12">
 
   <div class="field">
     <%= form.label :nombre %>
     <%= form.text_field :nombre, id: :profesor_nombre %>
   </div>
+        </div>
+        <div class="col xl4 l4 m12 s12">
 
   <div class="field">
     <%= form.label :apellido_paterno %>
     <%= form.text_field :apellido_paterno, id: :profesor_apellido_paterno %>
   </div>
-
+        </div>
+        <div class="col xl4 l4 m12 s12">
   <div class="field">
     <%= form.label :apellido_materno %>
     <%= form.text_field :apellido_materno, id: :profesor_apellido_materno %>
   </div>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :grado_academico %>
-    <%= form.text_field :grado_academico, id: :profesor_grado_academico %>
-  </div>
-
-  <div class="field">
-    <%= form.label :grado_academico_abreviado %>
-    <%= form.text_field :grado_academico_abreviado, id: :profesor_grado_academico_abreviado %>
-  </div>
-
+      <div class="row">
+        <div class="col xl3 l3 m12 s12">
   <div class="field">
     <%= form.label :correo %>
     <%= form.text_field :correo, id: :profesor_correo %>
   </div>
+        </div>
 
   <div class="field">
     <%= form.label :telefono %>
     <%= form.text_field :telefono, id: :profesor_telefono %>
   </div>
-
+      </div>
   <div class="field">
     <%= form.label :domicilio %>
     <%= form.text_field :domicilio, id: :profesor_domicilio %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+      <div class="row">
+        <div class="col xl12 l12 m12 s12 right-align">
+          <div class="actions">
+            <%= form.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+          </div>
+        </div>
+      </div>
 <% end %>
+  </div>
+</div>

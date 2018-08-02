@@ -33,7 +33,7 @@
         <td><%= periodo.inicio %></td>
         <td><%= periodo.fin %></td>
         <td><%= periodo.tipo %></td>
-        <!--<td><%= periodo.current %></td>-->s
+        <!--<td><%= periodo.current %></td>-->
         <td> <%= link_to '<i class="small material-icons color-icons">edit</i>'.html_safe, edit_periodo_path(periodo)  %> </td>
         <td> <%= link_to '<i class="small material-icons color-icons">delete</i>'.html_safe, periodo, method: :delete, data: { confirm: '¿Está Seguro que desea eliminar el periodo?' } %> </td>
 

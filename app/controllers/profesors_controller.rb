@@ -28,7 +28,7 @@ class ProfesorsController < ApplicationController
 
     respond_to do |format|
       if @profesor.save
-        format.html { redirect_to @profesor, notice: 'Profesor was successfully created.' }
+        format.html { redirect_to @profesor, notice: 'Profesor se ha creado exitosamente.' }
         format.json { render :show, status: :created, location: @profesor }
       else
         format.html { render :new }
