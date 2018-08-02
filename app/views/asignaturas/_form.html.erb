@@ -31,7 +31,21 @@
     <%= f.number_field :horas %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="field">
+      <%= f.label :semester_id %>
+      <%= f.collection_select :semester_id, Semester.all, :id, :clave, { prompt: "Seleccione un Semestre." }, class: "browser-default" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :plan_estudio_id %>
+      <%= f.collection_select :plan_estudio_id, PlanEstudio.all, :id, :clave, { prompt: "Seleccione un Plan de Estudios." }, class: "browser-default" %>
+    </div>
+
+  <div class="row">
+    <div class="col xl12 l12 m12 s12 right-align">
+      <div class="actions">
+        <%= f.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+      </div>
+    </div>
   </div>
 <% end %>

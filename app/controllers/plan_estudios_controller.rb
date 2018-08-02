@@ -1,5 +1,6 @@
 class PlanEstudiosController < ApplicationController
   before_action :set_plan_estudio, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /plan_estudios
   # GET /plan_estudios.json
@@ -31,7 +32,7 @@ class PlanEstudiosController < ApplicationController
     @plan_estudio.carrera = carrera
     respond_to do |format|
       if @plan_estudio.save
-        format.html { redirect_to @plan_estudio, notice: 'Plan estudio was successfully created.' }
+        format.html { redirect_to @plan_estudio, notice: 'Plan estudio se ha creado exitosamente.' }
         format.json { render :show, status: :created, location: @plan_estudio }
       else
         format.html { render :new }
@@ -72,6 +73,6 @@ class PlanEstudiosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plan_estudio_params
-      params.require(:plan_estudio).permit(:clave, :semestre, :inicio_vigencia, :fin_vigencia)
+      params.require(:plan_estudio).permit(:clave, :semestre, :inicio_vigencia, :fin_vigencia, :carrera_id)
     end
 end

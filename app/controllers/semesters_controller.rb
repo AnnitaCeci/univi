@@ -1,5 +1,6 @@
 class SemestersController < ApplicationController
   before_action :set_semester, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /semesters
   # GET /semesters.json
@@ -28,7 +29,7 @@ class SemestersController < ApplicationController
 
     respond_to do |format|
       if @semester.save
-        format.html { redirect_to @semester, notice: 'Semester was successfully created.' }
+        format.html { redirect_to @semester, notice: 'Semester se ha creado exitosamente.' }
         format.json { render :show, status: :created, location: @semester }
       else
         format.html { render :new }

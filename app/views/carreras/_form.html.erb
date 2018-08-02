@@ -1,27 +1,46 @@
+<br>
+<div class="row">
+<div class="col xl12 l12 m12 s12">
+
+
 <%= form_for(carrera) do |f| %>
   <% if carrera.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(carrera.errors.count, "error") %> prohibited this carrera from being saved:</h2>
 
       <ul>
-      <% carrera.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% carrera.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :nombre %>
-    <%= f.text_field :nombre %>
-  </div>
+    <div class="row">
+      <div class="col xl3 l3 m12 s12">
+        <div class="input">
+          <%= f.label :clave , :class => 'label-form'%>
+          <br>
+          <%= f.text_field :clave %>
+        </div>
+      </div>
+      <div class="col xl9 l9 m12 s12">
+        <div class="input">
+          <%= f.label :Nombre, :class => 'label-form'%>
+          <br>
+          <%= f.text_field :nombre %>
+        </div>
+      </div>
+ </div>
 
-  <div class="field">
-    <%= f.label :clave %>
-    <%= f.text_field :clave %>
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <div class="actions">
+      <%= f.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+    </div>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
+</div>
+</div>

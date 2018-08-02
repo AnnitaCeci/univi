@@ -1,255 +1,80 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-*{
-  margin: 0px;
-  padding: 0px;
+@font-face {
+  font-family: 'Google Sans';
+  src: url( font-path('GoogleSans-Regular.ttf')) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url( font-path('OpenSans-Regular.ttf')) format('truetype');
 }
 
 body{
-  background: #9C5811;
-  height: 100%;
+  background: rgba(231, 228, 227, 0.88);
+  font-family: 'Google Sans',  "Google Sans";
+
 }
 
-/*Estilos para la parte de control*/
-#contenedor{
-  width: 1300px;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-#header{
-  height: 156px;
-  display: block;
-  background: #fff;
-}
-#nav{
-  display: block;
-  margin: 0px;
-  height: 60px;
-  background-color: rgb(41,24,1);
-}
-
-#nav h2{
-  font-size: 20px;
-  color: #FFF;
-  text-align: center;
-}
-
-#contenido {
-  width: 950px;
-  height: 600px;
-  float: left;
-  background: #FFFFCC;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-#contenido h2{
-  font-size: 40px;
-  text-align: center;
-  line-height: 500px;
-}
-
-aside {
-  width: 325px;
-  height: 600px;
-  background: #410401;
-  margin-top: 10px;
-  float: right;
-}
-
-aside h2{
-  font-size: 40px;
-  text-align: center;
-  line-height: 500px;
-}
 
 footer {
-  background: #FFF;
-  clear: both;
+  background: linear-gradient(to bottom, #621B18, #511210);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-footer {
-  font-size: 5px;
-  text-align: center;
-  padding: 20px;
-  font-style: italic;
+.color-fondo {
+  background: rgba(255, 255, 255, 1);
 }
 
-/* **************************************************************************************************************  
-***************************************************************************************************************
-**********************************  */
-/* Estilos para el login*/
-#new_user {
-  width: 340px;
-  padding: 6px 12px;
+.fondo-nav{
+  background: linear-gradient(to bottom, #621B18, #511210);
 }
 
-#logotipo {
-  width: 400px;
-  background: #410401;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-main {                /* Estilo para la ubicación de las ventanas de login en el centro del contenido al lado izquierdo*/
-  float: left;
-  height: 100%;
+.color-texto{
+  color: #37474f;
+  font-size: 18px;
 }
 
-.conteiner-vertical-center {
-  display: flex;
-  margin-top: 10px;
+.icons-menu {
+  display: inline-block !important;
+  margin-top: 15px;
+  margin-left: 5px;
+  line-height: 18px !important;
+  height: 18px !important;
 }
 
-.conteiner-vertical-center .children {
-  margin: auto;
-  width: 400px;
-  height: 600px;
-  background: #FFFFCC;
-  border-radius: 10px;
+.hr-estilo{
+  height: 70%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* **************************************************************************************************************  
-***************************************************************************************************************
-**********************************  */
-
-/* Estilos para la vista de registrar */
-
-#logotipo1 {
-  width: 400px;
-  height: 150px;
-  background: #410401;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.modal-estilo {
+  max-height: 70% !important;
+  width: 40% !important;
+  margin-top: 5%;
 }
 
-#logotipo1 h2 {
- color: #FFF;
-}
-
-/* ************   EDITAR CUENTA  *******************   */
-
-#edit_user {
-  width: 80%;
-  padding: 6px 12px;
-}
-#edit_ico {
-  width: 400px;
-  background: #410401;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-main {
-  height: 100%;
-}
-
-.edit_cuenta {
-  display: flex;
-  margin-top: 0px;
-}
-
-.edit_cuenta .edit {
-  margin: auto;
-  width: 400px;
-  height: 800x;
-  background: #FFFFCC;
-  border-radius: 10px;
-
-}
-.button_to input{
-  background: #26a69a;
-  padding: 8px 14px;
-  border-radius: 6px; 
-  color: #fff;
-}
-
-/* **************************************************************************************************************  
-***************************************************************************************************************
-**********************************  */
-
-/* Estilos para la vista ¿Olvidaste tu contraseña? */
-
-
-main {
-  height: 100%;
-}
-
-.conteiner-horizontal-center {
-  display: flex;
-  margin-top:50px;
-}
-
-.conteiner-horizontal-center .children1 {
-  margin: auto;
-  width: 450px;
-  height: 400px;
-  background: #FFFFCC;
-  border-radius: 10px;
-
-}
-
-#logotipo2 {
-  width: 450px;
-  background: #410401;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.lista-size {
+  width: 250px !important;
 }
 
 
-#logotipo2 h2{
-  color: #FFF;
-}
-
-/* **************************************************************************************************************  
-***************************************************************************************************************
-**********************************  */
-
-/* Estilo para botones Register y Login*/
-ul.hmenu {
-  list-style: none;
-  margin: 0px 0px 15px 0px;
-  padding: 0px;
-}
-
-ul.hmenu li {
-  display: inline;
-  background: #410401;
-  padding: 8px 14px;
-  border-radius: 6px;
-  margin: 0px 0px 10px 0px; 
-}
-
-ul.hmenu li:hover {
-  background: #B22222;
-}
-
-ul.hmenu li a{
-  color: #fff;
-}
-
-ul.hmenu li a:hover{
-  background: #B22222;
-  color: #fff;
-}
-
-ul.hmenu p{
-  padding: 10px 0px 10px 0px;
-  font: Roboto;
-  font-size: 15px;
+.color-icons{
   color: #410401;
-  margin: 5px 0px 5px 0px;
 }
 
-.center-align {
-  display: inline;
-  float: left;
+.font-header{
+  font-family: 'Google Sans',  "Google Sans";
 }
-.right align {
-  display: inline;
-  float: right;
+
+.fondo-sesion{
+  background: rgba(255, 255, 255, 1);
+}
+
+.label-form{
+  font-size: 16px;
+  color:  black;
 }

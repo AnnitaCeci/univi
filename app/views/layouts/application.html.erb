@@ -3,42 +3,53 @@
   <head>
     <title>Univi</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <div id="contenedor" ng-app="univi">
-      <div id="header">
-         <img src="/assets/uvirtual-ea01ed0a7b5391a1983b601e2800536a6c49ad3b85bf61f2f1fd5f06289d698e.gif" alt="Uvirtual" width="1300" height="150" />
-      </div>
+    <link rel="stylesheet" href="/app/assets/stylesheets/materialize.min.css">
+  </head>
+
+  <body>
+  <% if user_signed_in? %>
+  <div id="contenedor">
+    <div id="header">
+      <%= render '/layouts/header' %>
+    </div>
     <div class="right-align">
       <ul class="hmenu">
         <%= render 'devise/menu/registration_items' %>
         <%= render 'devise/menu/login_items' %>
-        <% if user_signed_in? %>
-        <p>Bienvenido : <b><%= current_user.email %></b></p>
-          <%end%>
       </ul>
     </div>
-    <div id="nav">
-      <%= render '/layouts/menu' %>
-    </div>
-  </head>
+  </div>
+  <br><br>
+  <div class="row">
+    <%= render '/layouts/menu' %>
+  </div>
 
-  <body>
-    <section id="contenido">
-      <article>
-         <%= yield %>
-        <div class="center-align">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+  <div class="container">
+    <div class="row">
+      <div class="col xl12 l12 m12 s12">
+        <div class="card-panel  color-fondo">
+          <%= yield %>
         </div>
-      </article>
-    </section>
-    <aside>
-      <h2>Publicidad</h2>
-    </aside>
+      </div>
+      <div class="center-align">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    </div>
+  </div>
+
+    <footer class="page-footer">
+      <%= render 'layouts/footer' %>
+    </footer>
+  <% else %>
+    <div class="fondo-sesion">
+      <%= yield %>
+    </div>
+  <% end %>
   </body>
-  <footer>
-    <label>Carretera a Acatlima Km. 2.5</label>
-  </footer>
+
+
 </html>

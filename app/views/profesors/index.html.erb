@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+  <div class="col l4">
+    <h4>Profesores</h4>
+  </div>
+</div>
+
+<div class="row show-on-small">
+  <div class="col m12 s12 right-align">
+    <%= link_to 'Agregar Profesor', new_profesor_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+
+<hr>
+
+<table  id="periodos" class="highlight centered  responsive-table">
+  <thead>
+    <tr>
+      <th>Rfc</th>
+      <th>Nombre</th>
+      <th>Apellido paterno</th>
+      <th>Apellido materno</th>
+      <th>Grado academico</th>
+      <th>Grado academico abreviado</th>
+      <th>Correo</th>
+      <th>Telefono</th>
+      <th>Domicilio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profesors.each do |profesor| %>
+      <tr>
+        <td><%= profesor.rfc %></td>
+        <td><%= profesor.nombre %></td>
+        <td><%= profesor.apellido_paterno %></td>
+        <td><%= profesor.apellido_materno %></td>
+        <td><%= profesor.grado_academico %></td>
+        <td><%= profesor.grado_academico_abreviado %></td>
+        <td><%= profesor.correo %></td>
+        <td><%= profesor.telefono %></td>
+        <td><%= profesor.domicilio %></td>
+        <td> <%= link_to '<i class="small material-icons color-icons">edit</i>'.html_safe, edit_profesor_path(profesor)  %> </td>
+        <td> <%= link_to '<i class="small material-icons color-icons">delete</i>'.html_safe, profesor, method: :delete, data: { confirm: '¿Está Seguro que desea eliminar al profesor?' } %> </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

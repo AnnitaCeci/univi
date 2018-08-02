@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col l4">
+    <h4>Cursos</h4>
+  </div>
+</div>
+
+<div class="row show-on-small">
+  <div class="col m12 s12 right-align">
+    <%= link_to 'Agregar Curso', new_curso_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+
+<hr>
+
+<table  id="cursos" class="highlight centered  responsive-table">
+  <thead>
+    <tr>
+      <th>Asignatura</th>
+      <th>Periodo</th>
+      <th>Profesor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cursos.each do |curso| %>
+      <tr>
+        <td><%= curso.asignatura.nombre %></td>
+        <td><%= curso.periodo.nombre %></td>
+        <td><%= curso.profesor.nombre + " " + curso.profesor.apellido_paterno + " "+ curso.profesor.apellido_materno%></td>
+        <td> <%= link_to '<i class="small material-icons color-icons">edit</i>'.html_safe, edit_curso_path(curso)  %> </td>
+        <td> <%= link_to '<i class="small material-icons color-icons">delete</i>'.html_safe, curso, method: :delete, data: { confirm: '¿Está Seguro que desea eliminar el curso?' } %> </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col l4">
+    <h4>Inscripciones</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Nueva Inscripción', new_record_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+
+<hr>
+<table id="records" class="highlight centered responsive-table">
+  <thead>
+    <tr>
+      <th>Alumno</th>
+      <th>Periodo</th>
+      <th>Plan estudio</th>
+      <th>Semestre</th>
+      <th>Beca</th>
+      <th>Promedio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.alumno.nombre + " " + record.alumno.apellido_paterno + " "+ record.alumno.apellido_materno %></td>
+        <td><%= record.periodo.nombre %></td>
+        <td><%= record.plan_estudio.clave + "-" + record.plan_estudio.carrera.nombre %></td>
+        <td><%= record.semester.clave %></td>
+        <td><%= record.studentship %></td>
+        <td><%= record.average %></td>
+        <td><%= link_to 'Mostrar', record %></td>
+        <td><%= link_to 'Editar', edit_record_path(record) %></td>
+        <td><%= link_to 'Eliminar', record, method: :delete, data: { confirm: '¿Esta seguro que desea eliminar la inscripción?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,27 +1,45 @@
-<%= form_for(semester) do |f| %>
-  <% if semester.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(semester.errors.count, "error") %> prohibited this semester from being saved:</h2>
+<br>
+<div class="row">
+  <div class="col xl12 l12 m12 s12">
 
-      <ul>
-      <% semester.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <%= form_for(semester) do |f| %>
+        <% if semester.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(semester.errors.count, "error") %> prohibited this semester from being saved:</h2>
+
+              <ul>
+                <% semester.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <div class="row">
+          <div class="col xl3 l3 m12 s12">
+            <div class="field">
+              <%= f.label :clave %>
+              <%= f.number_field :clave %>
+            </div>
+          </div>
+
+          <div class="col xl9 l9 m12 s12">
+            <div class="input">
+              <div class="field">
+                <%= f.label :nombre %>
+                <%= f.text_field :nombre %>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col xl12 l12 m12 s12 right-align">
+              <div class="actions">
+                <%= f.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+              </div>
+            </div>
+          </div>
+    <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :clave %>
-    <%= f.number_field :clave %>
   </div>
-
-  <div class="field">
-    <%= f.label :nombre %>
-    <%= f.text_field :nombre %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

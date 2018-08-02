@@ -1,0 +1,51 @@
+<%= form_with(model: alumno, local: true) do |form| %>
+  <% if alumno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alumno.errors.count, "error") %> prohibited this alumno from being saved:</h2>
+
+      <ul>
+      <% alumno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :clave %>
+    <%= form.text_field :clave, id: :alumno_clave %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curp %>
+    <%= form.text_field :curp, id: :alumno_curp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :alumno_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellido_paterno %>
+    <%= form.text_field :apellido_paterno, id: :alumno_apellido_paterno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellido_materno %>
+    <%= form.text_field :apellido_materno, id: :alumno_apellido_materno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :alumno_correo %>
+  </div>
+
+  <div class="row">
+    <div class="col xl12 l12 m12 s12 right-align">
+      <div class="actions">
+        <%= form.submit 'Aceptar', :class => 'waves-effect waves-teal btn' %>
+      </div>
+    </div>
+  </div>
+<% end %>

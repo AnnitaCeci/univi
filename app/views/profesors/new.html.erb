@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col xl12 l12 m12 s12 ">
+    <h4>Nuevo Profesor</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Regresar', profesors_path,  { :class=>"waves-effect waves-blue btn"} %>
+  </div>
+</div>
+
+<%= render 'form', profesor: @profesor %>
+
+

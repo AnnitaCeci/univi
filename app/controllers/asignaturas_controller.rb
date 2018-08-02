@@ -1,5 +1,6 @@
 class AsignaturasController < ApplicationController
   before_action :set_asignatura, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /asignaturas
   # GET /asignaturas.json
@@ -28,7 +29,7 @@ class AsignaturasController < ApplicationController
 
     respond_to do |format|
       if @asignatura.save
-        format.html { redirect_to @asignatura, notice: 'Asignatura was successfully created.' }
+        format.html { redirect_to @asignatura, notice: 'Asignatura se ha creado exitosamente.' }
         format.json { render :show, status: :created, location: @asignatura }
       else
         format.html { render :new }
@@ -69,6 +70,6 @@ class AsignaturasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def asignatura_params
-      params.require(:asignatura).permit(:nombre, :clave, :creditos, :horas)
+      params.require(:asignatura).permit(:nombre, :clave, :creditos, :horas, :semester_id, :plan_estudio_id)
     end
 end

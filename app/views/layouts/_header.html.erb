@@ -1,0 +1,20 @@
+<nav class="nav-extended fondo-nav">
+  <div class="nav-wrapper">
+    <a><%= link_to(image_tag("/assets/utm.png", :alt => "logo", :title => "Home", :size=>"56x56"), "/") %></a>
+    <a href="#!" class="brand-logo font-header">División Universidad Virtual</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="#!"><i class="material-icons">home</i></a></li>
+      <% if user_signed_in? %>
+        <li><a href="#"><%= current_user.email %></a></li>
+        <li><%= link_to('Cerrar sesión', destroy_user_session_path, method: :delete) %></li>
+      <% end %>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="#"><i class="material-icons">home</i></a></li>
+      <li><a href="#">Usuario Usuario</a></li>
+      <li><a href="#">Cerrar Sessión</a></li>
+    </ul>
+  </div>
+</nav>
+
