@@ -1,0 +1,70 @@
+<%= form_with(model: grade, local: true) do |form| %>
+  <% if grade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(grade.errors.count, "error") %> prohibited this grade from being saved:</h2>
+
+      <ul>
+      <% grade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!--  <div class="field">-->
+    <%#= form.label :alumno_id %>
+    <%#= form.text_field :alumno_id, id: :grade_alumno_id %>
+<!--  </div>-->
+  <div class="field">
+    <%= form.label :alumno_id %>
+    <%#= form.text_field :alumno_id, id: :record_alumno_id %>
+    <%= form.collection_select :alumno_id, Alumno.all, :id, :nombre, { prompt: "Seleccione un Alumno" }, class: "browser-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :periodo_id %>
+    <%= form.collection_select :periodo_id, Periodo.all, :id, :nombre, { prompt: "Seleccione un Periodo" }, class: "browser-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :record_id %>
+    <%#= form.text_field :record_id, id: :grade_record_id %>
+    <%= form.collection_select :record_id, Record.all, :id, :id, { prompt: "Seleccione una Inscripción" }, class: "browser-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curso_id %>
+    <%= form.collection_select :curso_id, Curso.all, :id, :id, { prompt: "Seleccione una Inscripción" }, class: "browser-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parcial1 %>
+    <%= form.text_field :parcial1, id: :grade_parcial1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parcial2 %>
+    <%= form.text_field :parcial2, id: :grade_parcial2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :average %>
+    <%= form.text_field :average, id: :grade_average %>
+  </div>
+
+  <div class="field">
+    <%= form.label :extra1 %>
+    <%= form.text_field :extra1, id: :grade_extra1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :extra2 %>
+    <%= form.text_field :extra2, id: :grade_extra2 %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

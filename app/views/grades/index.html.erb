@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Grades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parcial1</th>
+      <th>Parcial2</th>
+      <th>Average</th>
+      <th>Extra1</th>
+      <th>Extra2</th>
+      <th>Alumno</th>
+      <th>Periodo</th>
+      <th>Record</th>
+      <th>Curso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grades.each do |grade| %>
+      <tr>
+        <td><%= grade.parcial1 %></td>
+        <td><%= grade.parcial2 %></td>
+        <td><%= grade.average %></td>
+        <td><%= grade.extra1 %></td>
+        <td><%= grade.extra2 %></td>
+        <td><%= grade.alumno %></td>
+        <td><%= grade.periodo %></td>
+        <td><%= grade.record %></td>
+        <td><%= grade.curso %></td>
+        <td><%= link_to 'Show', grade %></td>
+        <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
+        <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grade', new_grade_path %>
