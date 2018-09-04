@@ -1,19 +1,18 @@
+<%= form_for(semester) do |f| %>
+  <% if semester.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(semester.errors.count, "error") %> impiden que el Semestre se guarde:</h2>
+
+      <ul>
+        <% semester.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 <br>
 <div class="row">
   <div class="col xl12 l12 m12 s12">
-
-    <%= form_for(semester) do |f| %>
-        <% if semester.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(semester.errors.count, "error") %> prohibited this semester from being saved:</h2>
-
-              <ul>
-                <% semester.errors.full_messages.each do |message| %>
-                    <li><%= message %></li>
-                <% end %>
-              </ul>
-            </div>
-        <% end %>
         <div class="row">
           <div class="col xl3 l3 m12 s12">
             <div class="field">
