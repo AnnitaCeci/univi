@@ -1,19 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Grades</h1>
 
-<table>
+<div class="row">
+  <div class="col l4">
+    <h4>Calificaciones</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Agregar Calificación', new_grade_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+<div class="row">
+  <div class="col xl12 l12 m12 s12 right-align">
+    <%= link_to 'Agregar Calificación por grupo', new_grade_path,  { :class=>"waves-effect waves-green btn"} %>
+  </div>
+</div>
+
+
+<hr>
+<table id="carreras" class="highlight centered  responsive-table">
   <thead>
     <tr>
+      <th>Alumno</th>
+      <th>Curso</th>
       <th>Parcial1</th>
       <th>Parcial2</th>
-      <th>Average</th>
-      <th>Extra1</th>
-      <th>Extra2</th>
-      <th>Alumno</th>
-      <th>Periodo</th>
-      <th>Record</th>
-      <th>Curso</th>
+      <th>Promedio</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,18 +35,14 @@
   <tbody>
     <% @grades.each do |grade| %>
       <tr>
+        <td><%= grade.alumno.nombre + " " + grade.alumno.apellido_paterno + " " + grade.alumno.apellido_materno %></td>
+        <td><%= grade.curso.asignatura.nombre %></td>
         <td><%= grade.parcial1 %></td>
         <td><%= grade.parcial2 %></td>
         <td><%= grade.average %></td>
-        <td><%= grade.extra1 %></td>
-        <td><%= grade.extra2 %></td>
-        <td><%= grade.alumno %></td>
-        <td><%= grade.periodo %></td>
-        <td><%= grade.record %></td>
-        <td><%= grade.curso %></td>
-        <td><%= link_to 'Show', grade %></td>
-        <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
-        <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'ver'.html_safe, grade %></td>
+        <td> <%= link_to '<i class="small material-icons color-icons">edit</i>'.html_safe, edit_grade_path(grade)  %> </td>
+        <td> <%= link_to '<i class="small material-icons color-icons">delete</i>'.html_safe, grade, method: :delete, data: { confirm: '¿Está seguro que desea Eliminar la Calificación?' } %> </td>
       </tr>
     <% end %>
   </tbody>
