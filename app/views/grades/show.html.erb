@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parcial1:</strong>
+  <%= @grade.parcial1 %>
+</p>
+
+<p>
+  <strong>Parcial2:</strong>
+  <%= @grade.parcial2 %>
+</p>
+
+<p>
+  <strong>Average:</strong>
+  <%= @grade.average %>
+</p>
+
+<p>
+  <strong>Extra1:</strong>
+  <%= @grade.extra1 %>
+</p>
+
+<p>
+  <strong>Extra2:</strong>
+  <%= @grade.extra2 %>
+</p>
+
+<p>
+  <strong>Alumno:</strong>
+  <%= @grade.alumno %>
+</p>
+
+<p>
+  <strong>Periodo:</strong>
+  <%= @grade.periodo %>
+</p>
+
+<p>
+  <strong>Record:</strong>
+  <%= @grade.record %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @grade.curso %>
+</p>
+
+<%= link_to 'Edit', edit_grade_path(@grade) %> |
+<%= link_to 'Back', grades_path %>

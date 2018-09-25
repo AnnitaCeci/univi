@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180425165023) do
+ActiveRecord::Schema.define(version: 20180803175922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20180425165023) do
     t.integer "horas"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "plan_estudio_id"
     t.bigint "semester_id"
+    t.bigint "plan_estudio_id"
     t.index ["plan_estudio_id"], name: "index_asignaturas_on_plan_estudio_id"
     t.index ["semester_id"], name: "index_asignaturas_on_semester_id"
   end
@@ -44,18 +44,6 @@ ActiveRecord::Schema.define(version: 20180425165023) do
     t.string "clave"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "courses", force: :cascade do |t|
-    t.string "grupo"
-    t.bigint "asignatura_id"
-    t.bigint "teacher_id"
-    t.bigint "period_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["asignatura_id"], name: "index_courses_on_asignatura_id"
-    t.index ["period_id"], name: "index_courses_on_period_id"
-    t.index ["teacher_id"], name: "index_courses_on_teacher_id"
   end
 
   create_table "cursos", force: :cascade do |t|
@@ -69,23 +57,22 @@ ActiveRecord::Schema.define(version: 20180425165023) do
     t.index ["profesor_id"], name: "index_cursos_on_profesor_id"
   end
 
-  create_table "inscriptions", force: :cascade do |t|
-    t.integer "beca"
-    t.bigint "course_id"
-    t.bigint "student_id"
-    t.bigint "period_id"
+  create_table "grades", force: :cascade do |t|
+    t.float "parcial1"
+    t.float "parcial2"
+    t.float "average"
+    t.float "extra1"
+    t.float "extra2"
+    t.bigint "alumno_id"
+    t.bigint "periodo_id"
+    t.bigint "record_id"
+    t.bigint "curso_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_inscriptions_on_course_id"
-    t.index ["period_id"], name: "index_inscriptions_on_period_id"
-    t.index ["student_id"], name: "index_inscriptions_on_student_id"
-  end
-
-  create_table "inscriptions_courses", force: :cascade do |t|
-    t.bigint "inscription_id"
-    t.bigint "course_id"
-    t.index ["course_id"], name: "index_inscriptions_courses_on_course_id"
-    t.index ["inscription_id"], name: "index_inscriptions_courses_on_inscription_id"
+    t.index ["alumno_id"], name: "index_grades_on_alumno_id"
+    t.index ["curso_id"], name: "index_grades_on_curso_id"
+    t.index ["periodo_id"], name: "index_grades_on_periodo_id"
+    t.index ["record_id"], name: "index_grades_on_record_id"
   end
 
   create_table "periodos", id: :serial, force: :cascade do |t|
@@ -98,17 +85,6 @@ ActiveRecord::Schema.define(version: 20180425165023) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "periods", force: :cascade do |t|
-    t.string "name"
-    t.date "start_date"
-    t.date "end_date"
-    t.integer "weeks"
-    t.date "first_evaluation_date"
-    t.date "second_evaluation_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "plan_estudios", id: :serial, force: :cascade do |t|
     t.string "clave"
     t.string "semestre"
@@ -116,7 +92,7 @@ ActiveRecord::Schema.define(version: 20180425165023) do
     t.string "fin_vigencia"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "carrera_id"
+    t.bigint "carrera_id"
     t.index ["carrera_id"], name: "index_plan_estudios_on_carrera_id"
   end
 
@@ -156,40 +132,6 @@ ActiveRecord::Schema.define(version: 20180425165023) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "statutes", force: :cascade do |t|
-    t.float "approving_grade"
-    t.boolean "subject_retest"
-    t.integer "evaluations"
-    t.bigint "carrera_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["carrera_id"], name: "index_statutes_on_carrera_id"
-  end
-
-  create_table "students", force: :cascade do |t|
-    t.string "name"
-    t.string "paternal_surname"
-    t.string "maternal_surname"
-    t.string "email"
-    t.string "curp"
-    t.string "clave"
-    t.string "telefono"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "teachers", force: :cascade do |t|
-    t.string "nombre"
-    t.string "apellido_paterno"
-    t.string "apellido_materno"
-    t.string "correo_electronico"
-    t.string "area_adscripcion"
-    t.string "grado_academico"
-    t.string "abreviatura_grado_academica"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", id: :serial, force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -209,19 +151,16 @@ ActiveRecord::Schema.define(version: 20180425165023) do
 
   add_foreign_key "asignaturas", "plan_estudios"
   add_foreign_key "asignaturas", "semesters"
-  add_foreign_key "courses", "asignaturas"
-  add_foreign_key "courses", "periods"
-  add_foreign_key "courses", "teachers"
   add_foreign_key "cursos", "asignaturas"
   add_foreign_key "cursos", "periodos"
   add_foreign_key "cursos", "profesors"
-  add_foreign_key "inscriptions", "courses"
-  add_foreign_key "inscriptions", "periods"
-  add_foreign_key "inscriptions", "students"
+  add_foreign_key "grades", "alumnos"
+  add_foreign_key "grades", "cursos"
+  add_foreign_key "grades", "periodos"
+  add_foreign_key "grades", "records"
   add_foreign_key "plan_estudios", "carreras"
   add_foreign_key "records", "alumnos"
   add_foreign_key "records", "periodos"
   add_foreign_key "records", "plan_estudios"
   add_foreign_key "records", "semesters"
-  add_foreign_key "statutes", "carreras"
 end

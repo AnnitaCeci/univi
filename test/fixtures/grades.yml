@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parcial1: 1.5
+  parcial2: 1.5
+  average: 1.5
+  extra1: 1.5
+  extra2: 1.5
+  alumno: one
+  periodo: one
+  record: one
+  curso: one
+
+two:
+  parcial1: 1.5
+  parcial2: 1.5
+  average: 1.5
+  extra1: 1.5
+  extra2: 1.5
+  alumno: two
+  periodo: two
+  record: two
+  curso: two

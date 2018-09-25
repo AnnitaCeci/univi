@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
 
-<p>
+<div class="row">
+  <div class="col xl3 l3 m12 s12">
+
+
   <strong>Nombre:</strong>
   <%= @carrera.nombre %>
-</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col xl3 l3 m12 s12">
 
-<p>
+
   <strong>Clave:</strong>
   <%= @carrera.clave %>
-</p>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_carrera_path(@carrera) %> |
 <%= link_to 'Back', carreras_path %>
